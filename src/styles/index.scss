@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'GraphikLCG';
+  src: url('../fonts/GraphikLCGRegular.ttf'), url('../fonts/GraphikLCGBold.ttf'), url('../fonts/GraphikLCGMedium.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  font-family: 'GraphikLCG', 'IBM Plex Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 56px;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 20px;
+}

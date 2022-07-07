@@ -1,13 +1,15 @@
 import React from 'react'
-import Logo from './header/logo'
-import Burger from './header/burger'
-import FullName from './header/fullname'
+import Logo from '../Logo/Logo'
+import Burger from '../Burger/Burger'
+import FullName from '../Fullname/Fullname'
+
+import styles from './Header.module.scss'
 
 export default class Header extends React.Component {
   render () {
     return (
-      <header className="header">
-        <div className='header__container'>
+      <header className={styles.header}>
+        <div className={styles.container}>
           <Logo />
           <FullName />
         </div>

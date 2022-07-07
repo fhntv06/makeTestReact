@@ -1,14 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-import Main from './javascripts/components/blocks/main'
+import Wrapper from './javascripts/components/Wrapper/Wrapper'
 
-import './styles/index.css'
+import './styles/index.scss'
 
 class App extends React.Component {
   render () {
     return (
-      <Main/>
+      <Wrapper/>
     )
   }
 }
