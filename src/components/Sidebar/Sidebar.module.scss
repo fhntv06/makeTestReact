@@ -1,0 +1,27 @@
+.container {
+  margin-top: 200px;
+  width: 30%;
+  height: max-content;
+}
+
+.ul {
+  list-style-type: none;
+}
+
+.text {
+  color: #7D7D7D;
+  margin-bottom: 16px;
+}
+
+.text:last-child {
+  margin-bottom: 0;
+}
+
+.text:hover {
+  color: #1B1B1B;
+  cursor: pointer;
+}
+
+.active {
+  color: #3E29E3;
+}

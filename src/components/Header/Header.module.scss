@@ -1,3 +1,18 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: max-content;
+}
+
 .burger {
     position: relative;
     width: 32px;
@@ -43,4 +58,16 @@
 
 .lineBootomActive {
     transform: rotate(135deg);
+}
+
+.containerName {
+    margin-left: 16px;
+}
+
+.surname {
+    color: #1B1B1B;
+}
+
+.name {
+    color: #7D7D7D;
 }
