@@ -8,6 +8,7 @@
 
 body {
   margin: 0;
+  font-weight: normal;
   font-family: 'GraphikLCG', 'IBM Plex Mono', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -47,13 +48,18 @@ h4 {
   line-height: 28px;
 }
 
+.paragraphLead {
+  font-size: 24px;
+  line-height: 32px;
+}
+
 .p_18 {
   font-size: 18px;
   line-height: 28px;
 }
 
-.p_16 {
-  font-size: 14px;
+.paragraphDefault {
+  font-size: 16px;
   line-height: 20px;
 }
 .p_14 {

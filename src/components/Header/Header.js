@@ -3,11 +3,9 @@ import PropTypes from 'prop-types'
 
 import styles from './Header.module.scss'
 
-import logoImage from '../../images/header/logo.png'
-
 function Logo () {
   return (
-    <img className='logo' src={logoImage}/>
+    <img className='logo' src={`${process.env.PUBLIC_URL}/images/header/logo.png`}/>
   )
 }
 class FullName extends React.Component {

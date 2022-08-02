@@ -4,24 +4,29 @@ import PropTypes from 'prop-types'
 import styles from './TextBlockHead.module.scss'
 // разбитьы
 
-function h1Render (title) {
-  return <h1 className={styles.h1}>{title}</h1>
+function header (header) {
+  return <h1 className={styles.header}>{header}</h1>
 }
-function pLeadRender (text) {
-  return <p className={styles.text}>{text}</p>
+function paragraphLead (paragraphLead) {
+  return <p className={`${styles.paragraphLead} paragraphLead`}>{paragraphLead}</p>
+}
+function paragraphDefault (paragraphDefault) {
+  return <p className='paragraphDefault'>{paragraphDefault}</p>
 }
 
-export default class TextBlock extends React.Component {
+export default class TextBlockHead extends React.Component {
   static propTypes = {
-    title: PropTypes.string,
-    text: PropTypes.string
+    header: PropTypes.string,
+    paragraphLead: PropTypes.string,
+    paragraphDefault: PropTypes.string
   }
 
   render () {
     return (
       <div className={styles.textblock}>
-        {this.props.title ? h1Render(this.props.title) : null}
-        {this.props.text ? pLeadRender(this.props.text) : null}
+        {this.props.header ? header(this.props.header) : null}
+        {this.props.paragraphLead ? paragraphLead(this.props.paragraphLead) : null}
+        {this.props.paragraphDefault ? paragraphDefault(this.props.paragraphDefault) : null}
       </div>
     )
   }

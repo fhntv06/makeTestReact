@@ -29,7 +29,7 @@ export default class Sidebar extends React.Component {
     {
       title: 'UI',
       id: 3,
-      link: 'UI'
+      link: 'ui'
     }
   ]
 

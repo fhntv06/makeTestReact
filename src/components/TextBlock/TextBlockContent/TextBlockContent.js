@@ -3,24 +3,24 @@ import PropTypes from 'prop-types'
 
 import styles from './TextBlockContent.module.scss'
 
-function h3Render (title) {
-  return <h2 className={styles.title}>{title}</h2>
+function header (header) {
+  return <h2 className={styles.title}>{header}</h2>
 }
-function p16Render (text) {
-  return <p className='p_16'>{text}</p>
+function paragraphDefault (paragraphDefault) {
+  return <p className={'paragraphDefault'}>{paragraphDefault}</p>
 }
 
-export default class TextBlock extends React.Component {
+export default class TextBlockContent extends React.Component {
   static propTypes = {
-    title: PropTypes.string,
-    text: PropTypes.string
+    header: PropTypes.string,
+    paragraphDefault: PropTypes.string
   }
 
   render () {
     return (
       <div className={styles.textblock}>
-        {this.props.title ? h3Render(this.props.title) : null}
-        {this.props.text ? p16Render(this.props.text) : null}
+        {this.props.header ? header(this.props.header) : null}
+        {this.props.paragraphDefault ? paragraphDefault(this.props.paragraphDefault) : null}
       </div>
     )
   }
