@@ -8,19 +8,22 @@
 }
 
 .text {
-  color: #7D7D7D;
   margin-bottom: 16px;
+}
+
+.text a {
+  color: #7D7D7D;
 }
 
 .text:last-child {
   margin-bottom: 0;
 }
 
-.text:hover {
+.text:hover a {
   color: #1B1B1B;
   cursor: pointer;
 }
 
-.active {
+.active a {
   color: #3E29E3;
 }
