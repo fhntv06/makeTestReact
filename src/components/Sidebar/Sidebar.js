@@ -3,28 +3,24 @@ import PropTypes from 'prop-types'
 
 import styles from './Sidebar.module.scss'
 
-import { DataTextBLockContentContext } from '../../context/dataTextBLockContext'
+import { DataBlockContentContext } from '../../context/dataBLockContext'
 
 export default function Sidebar () {
-  const [activeLink, setActive] = useState(false)
-  const arDataTextBLockContent = useContext(DataTextBLockContentContext)
+  const [idActiveLink, setIdActiveLink] = useState(0)
+  const arDataBlockContent = useContext(DataBlockContentContext)
 
   function activatedLinkHandler (item) {
-    const activeLink = item.id
-    setActive(
-      activeLink
-    )
+    document.querySelector(`#${item.link}`).scrollIntoView({ behavior: 'smooth' })
+    setIdActiveLink(item.id)
   }
 
   return (
     <div className={styles.container}>
       <ul className={styles.ul}>
-        {
-          arDataTextBLockContent.map((item) =>
-            <li key={item.id} className={`${styles.text} ${activeLink === item.id ? styles.active : ''}`}>
-              <a href={`#${item.link}`} onClick={() => activatedLinkHandler(item)} className='p_14'>{item.linkTitle}</a>
-            </li>
-          )
+        {arDataBlockContent.map((item) =>
+          <li key={item.id} className={`${styles.text} ${idActiveLink === item.id ? styles.active : ''}`}>
+            <a onClick={() => activatedLinkHandler(item)} className='paragraphSize14'>{item.linkTitle}</a>
+          </li>)
         }
       </ul>
     </div>

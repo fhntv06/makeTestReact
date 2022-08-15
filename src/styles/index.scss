@@ -6,9 +6,13 @@
     url('../fonts/GraphikLCGMedium.ttf') format('truetype');
 }
 
-body {
+*{
+  box-sizing: border-box;
   margin: 0;
-  font-weight: normal;
+  padding: 0;
+}
+
+body {
   font-family: 'GraphikLCG', 'IBM Plex Mono', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -17,56 +21,81 @@ body {
   color: #1B1B1B;
 }
 
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 a {
   text-decoration: none;
 }
 
-h1 {
+h1,
+h2,
+.headerHigh,
+.header,
+.headerMobile {
+  font-weight: bold;
+}
+
+h1,
+.headerHigh {
   font-size: 48px;
   line-height: 56px;
 }
 
-h2 {
+h2,
+.header {
   font-size: 32px;
   line-height: 40px;
-  margin-bottom: 24px;
 }
 
-h3 {
-  font-size: 24px;
-  line-height: 32px;
+h4,
+h3,
+.headerMedium,
+.headerMediumMobile,
+.headerLow {
+  font-weight: 500;
 }
 
-h4 {
-  font-size: 18px;
-  line-height: 28px;
+.headerMobile {
+  font-size: 28px;
+  line-height: 36px;
 }
 
+h3,
+.headerMedium,
 .paragraphLead {
   font-size: 24px;
   line-height: 32px;
 }
 
-.p_18 {
+.paragraphLeadMobile,
+.headerMediumMobile {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+h4,
+.headerLow,
+.paragraphSize18 {
   font-size: 18px;
   line-height: 28px;
 }
 
 .paragraphDefault {
   font-size: 16px;
-  line-height: 20px;
+  line-height: 24px;
 }
-.p_14 {
+
+.paragraphSize14 {
   font-size: 14px;
   line-height: 20px;
 }
 
 .wrapper {
   padding: 40px 64px 48px;
+}
+
+.firstTextblock .textblock {
+  padding: 48px 0 0 0;
+}
+
+.firstTextblock .textblock .paragraphLead {
+  margin-bottom: 64px;
 }

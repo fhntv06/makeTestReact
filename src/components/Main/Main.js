@@ -1,20 +1,33 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
 import PropTypes from 'prop-types'
 
 import styles from './Main.module.scss'
 
 import Sidebar from '../Sidebar/Sidebar'
-import TextBlockContent from '../TextBlockContent/TextBlockContent'
+import DescriptionDevice from '../DescriptionDevice/DescriptionDevice'
+import DescriptionTabs from '../DescriptionTabs/DescriptionTabs'
+import DescriptionUi from '../DescriptionUi/DescriptionUi'
+import HeadContent from '../HeadContent/HeadContent'
 
 export default function Main (props) {
   return (
     <div className={styles.main}>
       <Sidebar />
-      <div className={styles.container}>
-        {props.arDataTextBLockContent.map((data) => {
+      <div className={'container'}>
+        {props.arDataBlockContent.map((data, index) => {
           return (
-            <div key={data.id} className={styles.containerDescriptionDevices}>
-              <TextBlockContent type={data.type} arData={props.arDataTextBLockContent}/>
+            <div key={data.id} className={`${styles.containerDescriptionDevices} ${index === 0 ? 'firstTextblock' : ''}`}>
+              <HeadContent data={data}/>
+              { data.type === 'grid' &&
+                <DescriptionDevice contentBlock={data.contentBlock}/>
+              }
+              { data.type === 'typo' &&
+                <DescriptionTabs contentBlock={data.contentBlock}/>
+              }
+              { data.type === 'ui' &&
+                <DescriptionUi contentBlock={data.contentBlock}/>
+              }
             </div>
           )
         })}
@@ -24,5 +37,5 @@ export default function Main (props) {
 }
 
 Main.propTypes = {
-  arDataTextBLockContent: PropTypes.array
+  arDataBlockContent: PropTypes.array
 }

@@ -3,16 +3,15 @@ import PropTypes from 'prop-types'
 
 import styles from './Table.module.scss'
 
-export default function Table (props) {
-  const titlesColumn = ['Контент', 'Колонок', 'Ширина колонки', 'Межколонник']
-  const columnResult = titlesColumn.map((titleColumn, index) => {
+export default function Table ({ dataRow }) {
+  const columnResult = dataRow.title.map((titleColumn, index) => {
     return (
         <div key={titleColumn} className={styles.column}>
-          <div className={`${styles.row} ${styles.head} paragraphDefault`}>
+          <div className={'paragraphDefault'}>
             {titleColumn}
           </div>
           <div className={`${styles.row} paragraphLead`}>
-            {props.dataRow[index]}
+            {dataRow.content[index]}
           </div>
         </div>
     )
@@ -26,5 +25,5 @@ export default function Table (props) {
 }
 
 Table.propTypes = {
-  dataRow: PropTypes.array
+  dataRow: PropTypes.object
 }

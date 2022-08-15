@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-import Header from './components/Header/Header'
+import Header from './components/Header//Header'
 import Main from './components/Main/Main'
 import Footer from './components/Footer/Footer'
 
-import { DataTextBLockContentContext, arDataTextBLockContent } from './context/dataTextBLockContext'
+import { DataBlockContentContext, arDataBlockContent } from './context/dataBLockContext'
 
 import './styles/index.scss'
 
@@ -14,9 +14,9 @@ function App () {
   return (
       <div className='wrapper'>
         <Header />
-          <DataTextBLockContentContext.Provider value={arDataTextBLockContent}>
-            <Main arDataTextBLockContent={arDataTextBLockContent}/>
-          </DataTextBLockContentContext.Provider>
+        <DataBlockContentContext.Provider value={ arDataBlockContent }>
+          <Main arDataBlockContent={arDataBlockContent} />
+        </DataBlockContentContext.Provider>
         <Footer/>
     </div>
   )

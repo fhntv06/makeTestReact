@@ -1,0 +1,15 @@
+.headerLead {
+  font-weight: bold;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(2, max-content);
+  grid-template-columns: repeat(3, max-content);
+  gap: 32px;
+  justify-content: space-between;
+}
+
+.section {
+  margin-bottom: 64px;
+}

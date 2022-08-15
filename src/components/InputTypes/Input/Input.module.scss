@@ -1,0 +1,120 @@
+.selectType,
+.inputType{
+  // width: 30%;
+}
+
+.inputContent {
+  position: relative;
+}
+
+.placeholder,
+input,
+.error,
+.selectType .select,
+.selectType .option,
+.selectType .arrow
+{
+  transition: .2s;
+}
+
+.inputType input,
+.placeholderActive,
+.errorActive,
+.selectType .selectActive,
+.selectType .option:hover,
+.selectType .arrowActive
+{
+  transition: .5s;
+}
+
+.placeholder,
+.selectType .arrow {
+  position: absolute;
+  pointer-events: none;
+}
+
+.selectType .arrow {
+  right: 0;
+  transform: translateY(6px);
+}
+
+.selectType .arrowActive {
+  transform: translateY(6px) rotateZ(180deg)
+}
+
+.placeholderActive {
+  color: #7D7D7D;
+  font-size: 12px;
+  line-height: 20px;
+  transform: translateY(-22px);
+}
+
+.inputType .error {
+  color: #E80F3B;
+}
+
+.label {
+  color: #7D7D7D;
+  margin-bottom: 40px;
+}
+
+input {
+  width: 100%;
+  outline:none;
+  border: none;
+  cursor: pointer;
+  border-bottom: 2px solid #AEADAE;
+  padding-bottom: 6px;
+}
+
+.inputType .inputActive {
+  border-bottom: 4px solid #3E29E3;
+}
+
+.inputType .inputError {
+  border-color: #E80F3B;
+}
+
+input:hover:not(.inputError),
+input:focus:not(.inputError),
+.selectType .inputContent:hover input,
+.selectType .inputActive {
+  border-color: #3E29E3;
+}
+
+.error {
+  opacity: 0;
+  margin-top: 6px;
+}
+
+.inputType .errorActive {
+  opacity: 1;
+}
+
+.selectType input {
+  pointer-events: none;
+}
+
+.selectType .inputContent {
+  cursor: pointer;
+}
+
+.selectType .select {
+  background-color: #fff;
+  height: 0;
+  overflow: hidden;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.selectType .selectActive {
+  height: max-content;
+}
+
+.selectType .option {
+  padding: 16px 24px;
+}
+
+.selectType .option:hover {
+  background-color: #3E29E3;
+  color: #fff;
+}

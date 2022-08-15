@@ -12,6 +12,14 @@ h3 {
   margin-bottom: 64px;
 }
 
+.container:last-child {
+  margin-bottom: 80px;
+}
+
+.container img {
+  width: 100%;
+}
+
 .head {
   color: #7D7D7D;
 }

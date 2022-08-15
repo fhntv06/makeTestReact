@@ -1,5 +1,8 @@
 .container {
-  margin-top: 200px;
+  position:-webkit-sticky; 
+  position:sticky; 
+  top: 20px;
+  margin-top: 216px;
   height: max-content;
 }
 
