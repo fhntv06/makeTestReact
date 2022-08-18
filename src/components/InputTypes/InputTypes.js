@@ -10,7 +10,7 @@ export default function InputTypes ({ content }) {
       return (
         <React.Fragment key={index}>
           {item.type === 'input' && <Input content={item}/>}
-          {(item.type === 'checkbox' || item.type === 'radio') && <Checkbox content={item}/>}
+          {(item.type === 'checkbox' || item.type === 'radio') && <Checkbox item={item}/>}
         </React.Fragment>
       )
     })

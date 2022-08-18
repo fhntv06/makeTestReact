@@ -1,13 +1,19 @@
 .headerLead {
   font-weight: bold;
 }
-
 .container {
   display: grid;
   grid-template-rows: repeat(2, max-content);
-  grid-template-columns: repeat(3, max-content);
   gap: 32px;
   justify-content: space-between;
+}
+
+.container3columns {
+  grid-template-columns: repeat(3, max-content);
+}
+
+.container2columns {
+  grid-template-columns: repeat(2, max-content);
 }
 
 .section {

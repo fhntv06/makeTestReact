@@ -195,12 +195,12 @@ export const arDataBlockContent = [
           {
             type: 'checkbox',
             label: 'Выбери меня',
-            activated: 'normal'
+            activated: 'hover'
           },
           {
             type: 'radio',
             label: 'Макет оказался сильней',
-            activated: 'normal'
+            activated: 'hover'
           },
           {
             type: 'checkbox',
@@ -213,7 +213,7 @@ export const arDataBlockContent = [
             activated: 'active'
           }
         ],
-        type: 'input'
+        type: 'checkbox'
       },
       {
         paragraphLead: 'Аккордеон',

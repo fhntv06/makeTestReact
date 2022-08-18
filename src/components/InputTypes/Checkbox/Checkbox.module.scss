@@ -1,3 +1,57 @@
+.container {
+  display: flex;
+  align-items: center;
+  grid-column-gap: 10px;
+}
+
+.checkbox { 
+  border-radius: 5px;
+}
+
+.radio {
+  border-radius: 50%;
+}
+
+.checkbox,
+.radio {
+  position: relative;
+  padding: 10px;
+  border: 2px solid #eee;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.checkbox:hover,
+.radio:hover {
+  border-color: #3E29E3;
+  transition: .5s;
+}
+
 .p {
   color: red;
+}
+
+.disabled {
+  border-color: #eee !important;
+  cursor: default;
+}
+
+.hover,
+.active {
+  border-color: #3E29E3;
+}
+
+.activeInner {
+  background-color: #3E29E3;
+  border-radius: 50%;
+}
+
+.imgItem,
+.activeInner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  transform: translate(50%, 50%);
 }

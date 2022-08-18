@@ -9,26 +9,24 @@ import Button from '../Button/Button'
 // import Accordion from '../Accordion/Accordion'
 
 export default function DescriptionUi ({ contentBlock }) {
+  let styleContainer
+
   return (
     contentBlock.map((data, index) => {
-      const items = data.content.map((item, index) => {
-        return (
-          <React.Fragment key={index}>
-            {/* { data.type === 'button' &&
-              <Button content={data.content}/>
-            }
-            { data.type === 'accordion' &&
-              <Accordion content={data.content}/>
-            } */}
-          </React.Fragment>
-        )
-      })
+      switch (data.type) {
+        case 'checkbox':
+          styleContainer = styles.container2columns
+          break
+        default:
+          styleContainer = styles.container3columns
+          break
+      }
 
       return (
         <div className={styles.section} key={index}>
           <HeadContent data={data}/>
-          <div className={styles.container}>
-            { data.type === 'input' &&
+          <div className={`${styles.container} ${styleContainer}`}>
+            { (data.type === 'input' || data.type === 'checkbox') &&
               <InputTypes content={data.content}/>
             }
             { data.type === 'select' &&
@@ -40,7 +38,6 @@ export default function DescriptionUi ({ contentBlock }) {
             {/* { data.type === 'accordion' &&
               <Accordion content={data.content}/>
             }  */}
-            {items}
           </div>
         </div>
       )
