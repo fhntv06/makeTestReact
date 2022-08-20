@@ -1,38 +1,31 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import PropTypes from 'prop-types'
 
 import styles from './Checkbox.module.scss'
 
-export default function Checkbox ({ item }) {
+export default function Checkbox ({ item, styleActivated }) {
   // написать хук общий для input и checkbox по изменения состояния
   const [activated, setActivated] = useState(false)
 
-  let styleActivated
-  switch (item.activated) {
-    case 'disabled':
-      styleActivated = styles.disabled
-      break
-    case 'hover':
-      styleActivated = styles.hover
-      break
-    case 'active':
-      styleActivated = styles.active
-      break
+  const checkedContainer = useRef(null)
+
+  function checkedHandler () {
+    setActivated(!activated)
+    checkedContainer.current.children[0].checked = !activated
   }
+
   return (
-    <>
-      <div className={styles.container}>
-        <input type={item.type} hidden/>
-        <div className={`${styles[item.type]} ${styleActivated !== undefined ? styleActivated : ''}`}>
-          {(item.type === 'checkbox' && item.activated === 'active') && <img className={styles.imgItem} src='' />}
-          {(item.type === 'radio' && item.activated === 'active') && <div className={styles.activeInner}></div>}
-        </div>
-        <p className={styles.p}>{item.label}</p>
+    <div className={styles.container} ref={checkedContainer}>
+      <input type={item.type} hidden/>
+      <div className={`${styles[item.type]} ${styleActivated && styles[styleActivated]} ${(item.activated === 'active' || activated) && styles.blueBackground}`} onClick={() => checkedHandler()}>
+        {(item.activated === 'active' || activated) && <img className={styles.imgItem} src={`${process.env.PUBLIC_URL}/images/content/description-ui/allright.png`} />}
       </div>
-    </>
+      <p className={styles.paragraph}>{item.label}</p>
+    </div>
   )
 }
 
 Checkbox.propTypes = {
-  item: PropTypes.object
+  item: PropTypes.object,
+  styleActivated: PropTypes.string
 }

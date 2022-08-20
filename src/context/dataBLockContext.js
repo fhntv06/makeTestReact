@@ -185,32 +185,36 @@ export const arDataBlockContent = [
           {
             type: 'checkbox',
             label: 'Выбери меня',
-            activated: 'disabled'
+            src: '/images/content/description-ui/allright.png'
           },
           {
             type: 'radio',
             label: 'Пластмассовый мир победил',
-            activated: 'disabled'
+            src: '/images/content/description-ui/allright.png'
           },
           {
             type: 'checkbox',
             label: 'Выбери меня',
-            activated: 'hover'
+            activated: 'hover',
+            src: '/images/content/description-ui/allright.png'
           },
           {
             type: 'radio',
             label: 'Макет оказался сильней',
-            activated: 'hover'
+            activated: 'hover',
+            src: '/images/content/description-ui/allright.png'
           },
           {
             type: 'checkbox',
             label: 'Птица счастья завтрашнего дня',
-            activated: 'active'
+            activated: 'active',
+            src: '/images/content/description-ui/allright.png'
           },
           {
             type: 'radio',
             label: 'Последний кораблик остыл',
-            activated: 'active'
+            activated: 'active',
+            src: '/images/content/description-ui/allright.png'
           }
         ],
         type: 'checkbox'

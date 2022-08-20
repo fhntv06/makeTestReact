@@ -4,11 +4,11 @@
   grid-column-gap: 10px;
 }
 
-.checkbox { 
-  border-radius: 5px;
+.radio {
+  border-radius: 50%;
 }
 
-.checkbox {
+.radio {
   position: relative;
   padding: 10px;
   border: 2px solid #eee;
@@ -16,15 +16,10 @@
   transition: .2s;
 }
 
-.checkbox:hover {
+.radio:hover {
   opacity: 1;
   border-color: #3E29E3;
   transition: .5s;
-}
-
-.hover,
-.active {
-  border-color: #3E29E3;
 }
 
 .paragraph {
@@ -32,16 +27,21 @@
   color: #1B1B1B;
 }
 
-.blueBackground {
-  background-color: #3E29E3;
+.hover,
+.active {
   border-color: #3E29E3;
 }
 
-.imgItem {
+.activeInner {
+  background-color: #3E29E3;
+  border-radius: 50%;
+}
+
+.activeInner {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 14px;
+  width: 10px;
   height: 10px;
   transform: translate(-50%, -50%);
 }
