@@ -16,6 +16,9 @@
   grid-template-columns: repeat(2, max-content);
 }
 
+.container1columns {
+  grid-template-columns: repeat(1, 1fr);
+}
 .section {
   margin-bottom: 64px;
 }

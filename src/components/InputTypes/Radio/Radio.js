@@ -17,7 +17,7 @@ export default function Radio ({ item, styleActivated }) {
   return (
     <div className={styles.container} ref={checkedContainer}>
         <input type={item.type} hidden/>
-        <div className={`${styles[item.type]} ${styleActivated && styles[styleActivated]}`} onClick={() => checkedHandler()}>
+        <div className={`${styles[item.type]} ${styleActivated && styles[styleActivated]} ${(item.activated === 'active' || activated) && styles.blueBackground}`} onClick={() => checkedHandler()}>
             {(item.activated === 'active' || activated) && <div className={styles.activeInner}></div>}
         </div>
         <p className={styles.paragraph}>{item.label}</p>

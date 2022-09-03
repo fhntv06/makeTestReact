@@ -35,6 +35,10 @@ class Burger extends React.Component {
 }
 
 export default class Header extends React.Component {
+  static propTypes = {
+    setModalIsOpen: PropTypes.func.isRequired
+  }
+
   constructor (props) {
     super(props)
     this.state = {
@@ -46,6 +50,7 @@ export default class Header extends React.Component {
     this.setState(
       { open: !open }
     )
+    this.props.setModalIsOpen(open)
   }
 
   render () {

@@ -6,7 +6,7 @@ import HeadContent from '../HeadContent/HeadContent'
 import InputTypes from '../InputTypes/InputTypes'
 import Select from '../Select/Select'
 import Button from '../Button/Button'
-// import Accordion from '../Accordion/Accordion'
+import Accordion from '../Accordion/Accordion'
 
 export default function DescriptionUi ({ contentBlock }) {
   let styleContainer
@@ -16,6 +16,9 @@ export default function DescriptionUi ({ contentBlock }) {
       switch (data.type) {
         case 'checkbox':
           styleContainer = styles.container2columns
+          break
+        case 'accordion':
+          styleContainer = styles.container1columns
           break
         default:
           styleContainer = styles.container3columns
@@ -35,9 +38,13 @@ export default function DescriptionUi ({ contentBlock }) {
             { data.type === 'button' &&
               <Button content={data.content} />
             }
-            {/* { data.type === 'accordion' &&
-              <Accordion content={data.content}/>
-            }  */}
+            { data.type === 'accordion' &&
+            (
+              data.content.map((content, index) => {
+                return <Accordion key={index} content={content}/>
+              })
+            )
+            }
           </div>
         </div>
       )
