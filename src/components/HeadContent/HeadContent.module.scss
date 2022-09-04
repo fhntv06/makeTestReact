@@ -12,11 +12,16 @@
 
 .headerLevelOne, 
 .paragraphLead, 
-.paragraphDefault {
+.paragraphDefault,
+.paragraphSize18 {
   grid-column: 1/3;
 }
 
 .headerLevelOne {
   grid-row: 1;
   margin-bottom: 16px;
+}
+
+.paragraphSize18 {
+  font-weight: bold;
 }

@@ -1,0 +1,11 @@
+.logo {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+@media (max-width: 577px) {
+    .modal {
+        display: none;
+    }
+}

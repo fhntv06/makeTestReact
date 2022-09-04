@@ -1,0 +1,31 @@
+.containerName {
+    margin-left: 16px;
+}
+
+.containerName.default {
+    margin-left: 0;
+}
+
+.surname {
+    color: #1B1B1B;
+}
+
+.surname.default {
+    font-weight: 900;
+}
+
+.name {
+    color: #7D7D7D;
+}
+
+.name.default {
+    color: #1B1B1B;
+    font-weight: 900;
+    margin-bottom: 32px;
+}
+
+.name.default,
+.surname.default {
+    font-size: 32px;
+    line-height: 40px;
+}

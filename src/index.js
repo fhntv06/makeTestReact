@@ -5,7 +5,7 @@ import Header from './components/Header//Header'
 import Main from './components/Main/Main'
 import Footer from './components/Footer/Footer'
 
-// import Modal from './components/Modal/Modal'
+import Modal from './components/Modal/Modal'
 
 import { DataBlockContentContext, arDataBlockContent } from './context/dataBLockContext'
 
@@ -25,7 +25,7 @@ function App () {
         </DataBlockContentContext.Provider>
         <Footer/>
       </div>
-      {/* <Modal modalIsOpen={modalIsOpen} /> */}
+      { modalIsOpen && <Modal /> }
     </React.Fragment>
   )
 }

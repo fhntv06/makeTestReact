@@ -30,3 +30,9 @@
 .active a {
   color: #3E29E3;
 }
+
+@media (max-width: 768px) {
+  .container {
+    display: none;
+  }
+}

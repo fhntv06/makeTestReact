@@ -22,12 +22,17 @@ function paragraphDefault (paragraphDefault) {
   return paragraphDefault && <p className={`paragraphDefault ${styles.paragraphDefault} `}>{paragraphDefault}</p>
 }
 
+function paragraphSize18 (paragraphSize18) {
+  return paragraphSize18 && <p className={`paragraphSize18 ${styles.paragraphSize18} `}>{paragraphSize18}</p>
+}
+
 export default function HeadContent ({ data }) {
   return (
     <div id={data.link} className={`${styles.textblock} textblock`}>
       {data.title && header(data.title)}
       {data.paragraphLead && paragraphLead(data.paragraphLead)}
       {data.paragraphDefault && paragraphDefault(data.paragraphDefault)}
+      {data.paragraphSize18 && paragraphSize18(data.paragraphSize18)}
     </div>
   )
 }

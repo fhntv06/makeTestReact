@@ -88,6 +88,7 @@ h4,
 }
 
 .wrapper {
+  overflow-y: hidden;
   padding: 40px 64px 48px;
 }
 
@@ -97,6 +98,10 @@ h4,
 
 .firstTextblock .textblock .paragraphLead {
   margin-bottom: 64px;
+}
+
+#modal .textblock .paragraphDefault {
+  margin-bottom: 24px;
 }
 
 .active {

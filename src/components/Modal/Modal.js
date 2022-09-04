@@ -1,41 +1,31 @@
-import React, { useState } from 'react'
-// import ModalWindow from 'react-modal'
-import PropTypes from 'prop-types'
+import React from 'react'
+
+import Logo from '../Logo/Logo'
 
 import styles from './Modal.module.scss'
+import Fullname from '../Fullname/Fullname'
+import HeadContent from '../HeadContent/HeadContent'
 
-export default function Modal ({ modalIsOpen }) {
-  // ModalWindow.setAppElement('#yourAppElement')
+import Link from '../Link/Link'
 
-  // eslint-disable-next-line no-unused-vars
-  const [modalOpen, setModalOpen] = useState(false)
+import { arDataModalContent } from '../../context/dataBLockContext'
 
-  function openClose () {
-    setModalOpen(modalIsOpen)
-  }
-
+export default function Modal () {
   return (
-    <div>
-      <Modal
-        isOpen={openClose}
-        onRequestClose={openClose}
-        className={styles.modal}
-        contentLabel="Example Modal"
-      >
-          <h2>Hello</h2>
-          <div>I am a modal</div>
-          <form>
-            <input />
-            <button>tab navigation</button>
-            <button>stays</button>
-            <button>inside</button>
-            <button>the modal</button>
-          </form>
-      </Modal>
+    <div id="modal" className={styles.modal}>
+      <div className={styles.modalContainer}>
+        <div className={styles.modalInner}>
+          <Logo parent={'modal'}/>
+          <div className={`${styles.innerContent} paragraphSize14`}>
+            <div className={styles.content}>
+              <p className={styles.taskAllright}>Задание выполнил</p>
+              <Fullname style='default'/>
+              <HeadContent data={arDataModalContent} />
+            </div>
+            <Link data={arDataModalContent.link} />
+          </div>
+        </div>
+      </div>
     </div>
   )
-}
-
-Modal.propTypes = {
-  modalIsOpen: PropTypes.bool
 }

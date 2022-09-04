@@ -4,35 +4,10 @@ import PropTypes from 'prop-types'
 import styles from './Header.module.scss'
 
 import Logo from '../Logo/Logo'
+import FullName from '../Fullname/Fullname'
+import Burger from '../Menu/Burger/Burger'
+
 import { worker } from '../../context/dataBLockContext'
-
-function FullName ({ worker }) {
-  return (
-    <div className={styles.containerName}>
-      <p className={styles.surname}>{worker.surname}</p>
-      <p className={styles.name}>{worker.name}</p>
-    </div>
-  )
-}
-
-class Burger extends React.Component {
-  static propTypes = {
-    open: PropTypes.bool.isRequired,
-    changeStyle: PropTypes.func.isRequired
-  }
-
-  render () {
-    const lineTop = this.props.open ? styles.lineTopActive : styles.lineTop
-    const lineBootom = this.props.open ? styles.lineBootomActive : styles.lineBootom
-
-    return (
-      <div onClick={this.props.changeStyle} className={styles.burger}>
-        <span className={lineTop}></span>
-        <span className={lineBootom}></span>
-      </div>
-    )
-  }
-}
 
 export default class Header extends React.Component {
   static propTypes = {
@@ -50,7 +25,7 @@ export default class Header extends React.Component {
     this.setState(
       { open: !open }
     )
-    this.props.setModalIsOpen(open)
+    this.props.setModalIsOpen(!this.state.open)
   }
 
   render () {

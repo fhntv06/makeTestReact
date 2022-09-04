@@ -243,4 +243,14 @@ export const arDataBlockContent = [
   }
 ]
 
+export const arDataModalContent = {
+  paragraphDefault: 'Краткое описание. Например, студент 4 курса специальности «Прикладная информатика» в КузГТУ',
+  paragraphSize18: '+7 (800) 555-35-35',
+  link: {
+    type: 'circle',
+    text: 'Ссылка на соцсеть/мессенджер',
+    src: '/'
+  }
+}
+
 export const DataBlockContentContext = React.createContext()
